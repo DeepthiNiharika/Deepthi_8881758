@@ -2,14 +2,15 @@ import calculator
 import unittest
 
 
-def test_addition():
-    assert calculator.add(2, 3) == 5
 
 
 class MyTestCase(unittest.TestCase):
 
+    def test_addition(self):
+        self.assertEqual(calculator.add(2, 3), 5)
+
     def test_subtraction(self):
-        self.assertEqual(calculator.subtract(5, 3), 2)
+        self.assertEqual(calculator.subtract(6, 3), 3)
 
     def test_multiplication(self):
         self.assertEqual(calculator.multiply(2, 3), 6)
